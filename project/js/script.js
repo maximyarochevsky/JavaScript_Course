@@ -35,3 +35,18 @@ adv.forEach(item => {
 genre.textContent = "ДРАМА";
 
 poster.style.backgroundImage = 'url("img/bg.jpg")';
+
+
+const listFilms = document.querySelector(".promo__interactive-list");
+
+listFilms.innerHTML = '';
+
+movieDB.movies.sort();
+
+movieDB.movies.forEach((item, i) => {
+    listFilms.innerHTML += ("afterbegin", `
+        <li class="promo__interactive-item">
+            ${i + 1}. ${item}
+            <div class="delete"></div>
+        </li>`);
+});
