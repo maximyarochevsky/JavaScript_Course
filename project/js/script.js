@@ -24,7 +24,13 @@ const movieDB = {
     ]
 };
 
-const adv = document.querySelector(".promo__adv");
+const adv = document.querySelectorAll(".promo__adv img"),
+      poster = document.querySelector(".promo__bg"),
+      genre = poster.querySelector(".promo__genre");
 
-adv.remove();
+adv.forEach(item => {
+    item.remove();
+});
+
+genre.textContent = "ДРАМА";
 
